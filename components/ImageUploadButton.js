@@ -45,17 +45,17 @@ const getLastModifiedInSeconds = () => {
       console.log(doc)
       setUri(doc.assets[0].uri)
       onImageUpload(doc.assets[0].uri)
-      const date=getLastModifiedDate()
-      const time=getLastModifiedInSeconds()      
-      const requestImage={
-        type:doc.assets[0].mimeType,
-        name:doc.assets[0].name,
-        size:doc.assets[0].size,
-        lastModified:time,
-        lastModifiedDate:date
-      }
-      console.log(requestImage)
-      uploadImage(requestImage)
+      // const date=getLastModifiedDate()
+      // const time=getLastModifiedInSeconds()      
+      // const requestImage={
+      //   type:doc.assets[0].mimeType,
+      //   name:doc.assets[0].name,
+      //   size:doc.assets[0].size,
+      //   lastModified:time,
+      //   lastModifiedDate:date
+      // }
+      // console.log(requestImage)
+      uploadImage(doc.assets[0])
     } catch (error) {
       console.log(error)
     }
